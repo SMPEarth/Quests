@@ -170,25 +170,25 @@ public class BukkitDependencies implements Dependencies {
     }
 
     private void initNpcDependency() {
-        if (isPluginAvailable("Citizens")) {
-            try {
-                addNpcDependency(new BukkitCitizensDependency(plugin));
-            } catch (final Exception e) {
-                plugin.getLogger().warning("Legacy version of Citizens found. Citizens in Quests not enabled.");
-            }
-        }
-        if (isPluginAvailable("ZNPCsPlus")) {
-            try {
-                Class.forName("lol.pyr.znpcsplus.ZNPCsPlus"); // Check for 1.x classes
-                addNpcDependency(new BukkitZnpcsPlusLegacyDependency(plugin));
-            } catch (final Exception ignored) {
-            }
-            try {
-                Class.forName("lol.pyr.znpcsplus.ZNpcsPlus"); // Check for 2.x classes
-                addNpcDependency(new BukkitZnpcsPlusDependency(plugin));
-            } catch (final Exception ignored) {
-            }
-        }
+//        if (isPluginAvailable("Citizens")) {
+//            try {
+//                addNpcDependency(new BukkitCitizensDependency(plugin));
+//            } catch (final Exception e) {
+//                plugin.getLogger().warning("Legacy version of Citizens found. Citizens in Quests not enabled.");
+//            }
+//        }
+//        if (isPluginAvailable("ZNPCsPlus")) {
+//            try {
+//                Class.forName("lol.pyr.znpcsplus.ZNPCsPlus"); // Check for 1.x classes
+//                addNpcDependency(new BukkitZnpcsPlusLegacyDependency(plugin));
+//            } catch (final Exception ignored) {
+//            }
+//            try {
+//                Class.forName("lol.pyr.znpcsplus.ZNpcsPlus"); // Check for 2.x classes
+//                addNpcDependency(new BukkitZnpcsPlusDependency(plugin));
+//            } catch (final Exception ignored) {
+//            }
+//        }
     }
 
     public DenizenAPI getDenizenApi() {
